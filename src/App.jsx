@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 import { Header } from "./Components/Header"
+import { PokemonList } from "./Components/PokeList";
 import { api } from "./services/api"
 
 function App() {
 
   const [pokeList, setPokeList] = useState([])
   const [pokeDatabase, setPokeDatabase] = useState([])
+
   useEffect(() => {
 
     async function loadPokemonData(){
@@ -44,16 +46,7 @@ function App() {
   return (
     <>
       <Header/>
-      {pokeList.map((pokemon) => {
-
-        return(
-          <li key={pokemon.name}>
-            <p>{pokemon.name}</p>
-
-          </li>
-        )
-
-      })}
+      <PokemonList pokeList={pokeList}/>
     </>
   )
 }
