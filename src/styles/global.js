@@ -17,11 +17,18 @@ const GlobalStyle = createGlobalStyle`
     --padding-input: 0 8px;
     --padding-button: 6px;
 
+    --font-size-1: 2rem;
+    --font-size-2: 1.5rem;
+    --font-size-3: 1.125rem;
+    --font-size-4: 1rem;
+
     --gap-default: 1rem;
     --gap-form: 8px;
     --gap-button-container: 8px;
+    --gap-card: 16px;
 
     --radius-default: 4px;
+    --radius-card: 5px;
 
     --button-icon-size: 24px;
 
