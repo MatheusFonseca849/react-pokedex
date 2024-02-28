@@ -45,7 +45,7 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header pokeList={pokeList} setPokeList={setPokeList} pokeDatabase={pokeDatabase} setPokeDatabase={setPokeDatabase}/>
       <PokemonList pokeList={pokeList}/>
     </>
   )

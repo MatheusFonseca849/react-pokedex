@@ -5,7 +5,13 @@ import { FaStar } from "react-icons/fa";
 import { TbPokeball } from "react-icons/tb";
 
 
-export const Header = () => {
+export const Header = ({pokeList, setPokeList, pokeDatabase, setPokeDatabase}) => {
+
+    function searchPokemon(string){
+
+        setPokeList(pokeDatabase.filter((pokemon) => {pokemon.name.includes(string)}))
+        console.log(pokeList)
+    }
 
     return (
 
@@ -16,8 +22,8 @@ export const Header = () => {
 
             
             <form className="searchForm">
-
-                <input type="text" placeholder="Search Pokemon" />
+    
+                <input type="text" placeholder="Search Pokemon" onChange={(e) => searchPokemon(e.target.value)} />
                 <button>
                     <IoSearch size={24} color="grey"/>
                 </button>

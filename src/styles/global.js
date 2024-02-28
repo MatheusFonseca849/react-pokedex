@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
 
     --radius-default: 4px;
     --radius-card: 5px;
+    --radius-card-img: 6px 0 0 6px;
 
     --button-icon-size: 24px;
 
